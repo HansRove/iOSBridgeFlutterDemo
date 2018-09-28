@@ -13,19 +13,30 @@
 		D007D553215DFCCE00A6EAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D007D552215DFCCE00A6EAB2 /* Assets.xcassets */; };
 		D007D556215DFCCE00A6EAB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D007D554215DFCCE00A6EAB2 /* LaunchScreen.storyboard */; };
 		D007D559215DFCCE00A6EAB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D558215DFCCE00A6EAB2 /* main.m */; };
-		D007D575215E0C9500A6EAB2 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D567215E0C9400A6EAB2 /* App.framework */; };
-		D007D576215E0C9500A6EAB2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D007D569215E0C9400A6EAB2 /* LICENSE */; };
-		D007D577215E0C9500A6EAB2 /* vm_snapshot_data in Resources */ = {isa = PBXBuildFile; fileRef = D007D56A215E0C9400A6EAB2 /* vm_snapshot_data */; };
-		D007D578215E0C9500A6EAB2 /* isolate_snapshot_data in Resources */ = {isa = PBXBuildFile; fileRef = D007D56B215E0C9400A6EAB2 /* isolate_snapshot_data */; };
-		D007D579215E0C9500A6EAB2 /* AssetManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D007D56C215E0C9400A6EAB2 /* AssetManifest.json */; };
-		D007D57A215E0C9500A6EAB2 /* kernel_blob.bin in Resources */ = {isa = PBXBuildFile; fileRef = D007D56D215E0C9400A6EAB2 /* kernel_blob.bin */; };
-		D007D57B215E0C9500A6EAB2 /* FontManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D007D56E215E0C9400A6EAB2 /* FontManifest.json */; };
-		D007D57C215E0C9500A6EAB2 /* platform_strong.dill in Resources */ = {isa = PBXBuildFile; fileRef = D007D56F215E0C9400A6EAB2 /* platform_strong.dill */; };
-		D007D57D215E0C9500A6EAB2 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D007D571215E0C9400A6EAB2 /* MaterialIcons-Regular.ttf */; };
-		D007D57E215E0C9500A6EAB2 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D573215E0C9400A6EAB2 /* Flutter.framework */; };
 		D007D57F215E0C9500A6EAB2 /* Flutter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D007D574215E0C9400A6EAB2 /* Flutter.podspec */; };
 		D007D582215E13BC00A6EAB2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D581215E13BC00A6EAB2 /* SecondViewController.m */; };
+		D007D588215E14E800A6EAB2 /* HRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D587215E14E800A6EAB2 /* HRTabBarController.m */; };
+		D007D58E215E164E00A6EAB2 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D567215E0C9400A6EAB2 /* App.framework */; };
+		D007D58F215E164E00A6EAB2 /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D007D567215E0C9400A6EAB2 /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D007D590215E164E00A6EAB2 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D573215E0C9400A6EAB2 /* Flutter.framework */; };
+		D007D591215E164E00A6EAB2 /* Flutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D007D573215E0C9400A6EAB2 /* Flutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D007D594215E17DB00A6EAB2 /* flutter_assets in Resources */ = {isa = PBXBuildFile; fileRef = D007D593215E17DB00A6EAB2 /* flutter_assets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D007D592215E164E00A6EAB2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D007D58F215E164E00A6EAB2 /* App.framework in Embed Frameworks */,
+				D007D591215E164E00A6EAB2 /* Flutter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D007D546215DFCCC00A6EAB2 /* iOSBridgeFlutterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBridgeFlutterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,18 +53,13 @@
 		D007D561215E064300A6EAB2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		D007D562215E065100A6EAB2 /* Flutter.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Flutter.xcconfig; sourceTree = "<group>"; };
 		D007D567215E0C9400A6EAB2 /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
-		D007D569215E0C9400A6EAB2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		D007D56A215E0C9400A6EAB2 /* vm_snapshot_data */ = {isa = PBXFileReference; lastKnownFileType = file; path = vm_snapshot_data; sourceTree = "<group>"; };
-		D007D56B215E0C9400A6EAB2 /* isolate_snapshot_data */ = {isa = PBXFileReference; lastKnownFileType = file; path = isolate_snapshot_data; sourceTree = "<group>"; };
-		D007D56C215E0C9400A6EAB2 /* AssetManifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssetManifest.json; sourceTree = "<group>"; };
-		D007D56D215E0C9400A6EAB2 /* kernel_blob.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = kernel_blob.bin; sourceTree = "<group>"; };
-		D007D56E215E0C9400A6EAB2 /* FontManifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FontManifest.json; sourceTree = "<group>"; };
-		D007D56F215E0C9400A6EAB2 /* platform_strong.dill */ = {isa = PBXFileReference; lastKnownFileType = file; path = platform_strong.dill; sourceTree = "<group>"; };
-		D007D571215E0C9400A6EAB2 /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
 		D007D573215E0C9400A6EAB2 /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flutter.framework; sourceTree = "<group>"; };
 		D007D574215E0C9400A6EAB2 /* Flutter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; };
 		D007D580215E13BC00A6EAB2 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D007D581215E13BC00A6EAB2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D007D586215E14E800A6EAB2 /* HRTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRTabBarController.h; sourceTree = "<group>"; };
+		D007D587215E14E800A6EAB2 /* HRTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRTabBarController.m; sourceTree = "<group>"; };
+		D007D593215E17DB00A6EAB2 /* flutter_assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flutter_assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D007D575215E0C9500A6EAB2 /* App.framework in Frameworks */,
-				D007D57E215E0C9500A6EAB2 /* Flutter.framework in Frameworks */,
+				D007D58E215E164E00A6EAB2 /* App.framework in Frameworks */,
+				D007D590215E164E00A6EAB2 /* Flutter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +102,8 @@
 				D007D54D215DFCCC00A6EAB2 /* ViewController.m */,
 				D007D580215E13BC00A6EAB2 /* SecondViewController.h */,
 				D007D581215E13BC00A6EAB2 /* SecondViewController.m */,
+				D007D586215E14E800A6EAB2 /* HRTabBarController.h */,
+				D007D587215E14E800A6EAB2 /* HRTabBarController.m */,
 				D007D54F215DFCCC00A6EAB2 /* Main.storyboard */,
 				D007D552215DFCCE00A6EAB2 /* Assets.xcassets */,
 				D007D554215DFCCE00A6EAB2 /* LaunchScreen.storyboard */,
@@ -118,34 +126,11 @@
 		D007D566215E0C9400A6EAB2 /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
+				D007D593215E17DB00A6EAB2 /* flutter_assets */,
 				D007D567215E0C9400A6EAB2 /* App.framework */,
-				D007D568215E0C9400A6EAB2 /* flutter_assets */,
 				D007D572215E0C9400A6EAB2 /* engine */,
 			);
 			path = Flutter;
-			sourceTree = "<group>";
-		};
-		D007D568215E0C9400A6EAB2 /* flutter_assets */ = {
-			isa = PBXGroup;
-			children = (
-				D007D569215E0C9400A6EAB2 /* LICENSE */,
-				D007D56A215E0C9400A6EAB2 /* vm_snapshot_data */,
-				D007D56B215E0C9400A6EAB2 /* isolate_snapshot_data */,
-				D007D56C215E0C9400A6EAB2 /* AssetManifest.json */,
-				D007D56D215E0C9400A6EAB2 /* kernel_blob.bin */,
-				D007D56E215E0C9400A6EAB2 /* FontManifest.json */,
-				D007D56F215E0C9400A6EAB2 /* platform_strong.dill */,
-				D007D570215E0C9400A6EAB2 /* fonts */,
-			);
-			path = flutter_assets;
-			sourceTree = "<group>";
-		};
-		D007D570215E0C9400A6EAB2 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				D007D571215E0C9400A6EAB2 /* MaterialIcons-Regular.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		D007D572215E0C9400A6EAB2 /* engine */ = {
@@ -168,6 +153,7 @@
 				D007D543215DFCCC00A6EAB2 /* Frameworks */,
 				D007D544215DFCCC00A6EAB2 /* Resources */,
 				D007D563215E0AB600A6EAB2 /* ShellScript */,
+				D007D592215E164E00A6EAB2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,17 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D007D579215E0C9500A6EAB2 /* AssetManifest.json in Resources */,
-				D007D577215E0C9500A6EAB2 /* vm_snapshot_data in Resources */,
 				D007D556215DFCCE00A6EAB2 /* LaunchScreen.storyboard in Resources */,
-				D007D578215E0C9500A6EAB2 /* isolate_snapshot_data in Resources */,
-				D007D57C215E0C9500A6EAB2 /* platform_strong.dill in Resources */,
+				D007D594215E17DB00A6EAB2 /* flutter_assets in Resources */,
 				D007D553215DFCCE00A6EAB2 /* Assets.xcassets in Resources */,
-				D007D57B215E0C9500A6EAB2 /* FontManifest.json in Resources */,
-				D007D57D215E0C9500A6EAB2 /* MaterialIcons-Regular.ttf in Resources */,
-				D007D57A215E0C9500A6EAB2 /* kernel_blob.bin in Resources */,
 				D007D57F215E0C9500A6EAB2 /* Flutter.podspec in Resources */,
-				D007D576215E0C9500A6EAB2 /* LICENSE in Resources */,
 				D007D551215DFCCC00A6EAB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +239,7 @@
 				D007D582215E13BC00A6EAB2 /* SecondViewController.m in Sources */,
 				D007D54E215DFCCC00A6EAB2 /* ViewController.m in Sources */,
 				D007D559215DFCCE00A6EAB2 /* main.m in Sources */,
+				D007D588215E14E800A6EAB2 /* HRTabBarController.m in Sources */,
 				D007D54B215DFCCC00A6EAB2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

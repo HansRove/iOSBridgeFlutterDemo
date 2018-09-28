@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HRTabBarController.h"
 
 @interface AppDelegate ()
     
@@ -27,6 +28,9 @@
 - (BOOL)application:(UIApplication*)application
 didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:[[HRTabBarController alloc] init]];
+    [self.window makeKeyAndVisible];
     
     
     return [_lifeCycleDelegate application:application didFinishLaunchingWithOptions:launchOptions];
