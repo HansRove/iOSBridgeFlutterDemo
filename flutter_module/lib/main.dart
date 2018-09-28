@@ -33,6 +33,29 @@ class _MyHomePageState extends State<MyHomePage> {
   // 创建一个给native的channel (类似iOS的通知）
   static const methodChannel = const MethodChannel('com.pages.your/native_get');
 
+  // 注册一个通知
+  static const EventChannel eventChannel = const EventChannel('com.pages.your/native_post');
+
+  @override
+  void initState() {
+    super.initState();
+
+    // 监听事件，同时发送参数12345
+    eventChannel.receiveBroadcastStream(12345).listen(_onEvent,onError: _onError);
+  }
+
+  String naviTitle = '你好，大佬' ;
+  // 回调事件
+  void _onEvent(Object event) {
+    setState(() {
+      naviTitle =  event.toString();
+    });
+  }
+  // 错误返回
+  void _onError(Object error) {
+
+  }
+
   int _counter = 0;
 
   void _incrementCounter() {
@@ -80,11 +103,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return new Scaffold(
-//      appBar: new AppBar(
-//        // Here we take the value from the MyHomePage object that was created by
-//        // the App.build method, and use it to set our appbar title.
-//        title: new Text(widget.title),
-//      ),
+      appBar: new AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: new Text(naviTitle),
+      ),
       body: new Center(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -10,7 +10,7 @@
 #import <Flutter/Flutter.h>
 #import "ThirdViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<FlutterStreamHandler>
 
 @end
 
@@ -24,16 +24,23 @@
     
     UIButton *pushButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [self.view  addSubview:pushButton];
-    pushButton.frame = CGRectMake(50, 250, 120, 50);
+    pushButton.frame = CGRectMake(0, 250, 320, 50);
     pushButton.backgroundColor = [UIColor redColor];
+    [pushButton setTitle:@"跳转Flutter-MethodChannel" forState:(UIControlStateNormal)];
+    [pushButton addTarget:self action:@selector(pushFlutterViewController_MethodChannel) forControlEvents:(UIControlEventTouchUpInside)];
     
-    [pushButton setTitle:@"跳转Flutter" forState:(UIControlStateNormal)];
-    [pushButton addTarget:self action:@selector(pushFlutterViewController) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIButton *pushButton1 = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [self.view  addSubview:pushButton1];
+    pushButton1.frame = CGRectMake(0, 380, 320, 50);
+    pushButton1.backgroundColor = [UIColor redColor];
+    [pushButton1 setTitle:@"跳转Flutter-EventChannel" forState:(UIControlStateNormal)];
+    [pushButton1 addTarget:self action:@selector(pushFlutterViewController_EventChannel) forControlEvents:(UIControlEventTouchUpInside)];
 }
 
-    - (void)pushFlutterViewController {
+    - (void)pushFlutterViewController_MethodChannel {
         FlutterViewController* flutterViewController = [[FlutterViewController alloc] initWithProject:nil nibName:nil bundle:nil];
-        flutterViewController.navigationItem.title = @"Flutter Demo";
+        flutterViewController.navigationItem.title = @"MethodChannel Demo";
             __weak __typeof(self) weakSelf = self;
         
         // 要与main.dart中一致
@@ -67,4 +74,37 @@
         [self.navigationController pushViewController:flutterViewController animated:YES];
     }
 
+    
+    - (void)pushFlutterViewController_EventChannel {
+        FlutterViewController* flutterViewController = [[FlutterViewController alloc] initWithProject:nil nibName:nil bundle:nil];
+        flutterViewController.navigationItem.title = @"EventChannel Demo";
+        // 要与main.dart中一致
+        NSString *channelName = @"com.pages.your/native_post";
+        
+        FlutterEventChannel *evenChannal = [FlutterEventChannel eventChannelWithName:channelName binaryMessenger:flutterViewController];
+        // 代理
+        [evenChannal setStreamHandler:self];
+        
+        [self.navigationController pushViewController:flutterViewController animated:YES];
+    }
+
+#pragma mark - <FlutterStreamHandler>
+    // // 这个onListen是Flutter端开始监听这个channel时的回调，第二个参数 EventSink是用来传数据的载体。
+    - (FlutterError* _Nullable)onListenWithArguments:(id _Nullable)arguments
+                                           eventSink:(FlutterEventSink)events {
+        
+        // arguments flutter给native的参数
+        // 回调给flutter
+        if (events) {
+            events(@"我是标题");
+        }
+        return nil;
+    }
+    
+    /// flutter不再接收
+    - (FlutterError* _Nullable)onCancelWithArguments:(id _Nullable)arguments {
+        // arguments flutter给native的参数
+        return nil;
+    }
+    
 @end
