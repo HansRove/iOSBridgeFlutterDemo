@@ -16,8 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.title = @"第一tab";
+    
+    UIButton *pushButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    pushButton.frame = CGRectMake(50, 100, 120, 50);
+    pushButton.backgroundColor = [UIColor redColor];
+    
+    [pushButton setTitle:@"跳转Flutter" forState:(UIControlStateNormal)];
+    [pushButton addTarget:self action:@selector(pushFlutter) forControlEvents:(UIControlEventTouchUpInside)];
 }
 
+    - (void)pushFlutter {
+        
+    }
 
 @end

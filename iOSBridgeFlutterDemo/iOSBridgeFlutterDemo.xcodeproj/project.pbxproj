@@ -13,6 +13,18 @@
 		D007D553215DFCCE00A6EAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D007D552215DFCCE00A6EAB2 /* Assets.xcassets */; };
 		D007D556215DFCCE00A6EAB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D007D554215DFCCE00A6EAB2 /* LaunchScreen.storyboard */; };
 		D007D559215DFCCE00A6EAB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D558215DFCCE00A6EAB2 /* main.m */; };
+		D007D575215E0C9500A6EAB2 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D567215E0C9400A6EAB2 /* App.framework */; };
+		D007D576215E0C9500A6EAB2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D007D569215E0C9400A6EAB2 /* LICENSE */; };
+		D007D577215E0C9500A6EAB2 /* vm_snapshot_data in Resources */ = {isa = PBXBuildFile; fileRef = D007D56A215E0C9400A6EAB2 /* vm_snapshot_data */; };
+		D007D578215E0C9500A6EAB2 /* isolate_snapshot_data in Resources */ = {isa = PBXBuildFile; fileRef = D007D56B215E0C9400A6EAB2 /* isolate_snapshot_data */; };
+		D007D579215E0C9500A6EAB2 /* AssetManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D007D56C215E0C9400A6EAB2 /* AssetManifest.json */; };
+		D007D57A215E0C9500A6EAB2 /* kernel_blob.bin in Resources */ = {isa = PBXBuildFile; fileRef = D007D56D215E0C9400A6EAB2 /* kernel_blob.bin */; };
+		D007D57B215E0C9500A6EAB2 /* FontManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D007D56E215E0C9400A6EAB2 /* FontManifest.json */; };
+		D007D57C215E0C9500A6EAB2 /* platform_strong.dill in Resources */ = {isa = PBXBuildFile; fileRef = D007D56F215E0C9400A6EAB2 /* platform_strong.dill */; };
+		D007D57D215E0C9500A6EAB2 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D007D571215E0C9400A6EAB2 /* MaterialIcons-Regular.ttf */; };
+		D007D57E215E0C9500A6EAB2 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D573215E0C9400A6EAB2 /* Flutter.framework */; };
+		D007D57F215E0C9500A6EAB2 /* Flutter.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D007D574215E0C9400A6EAB2 /* Flutter.podspec */; };
+		D007D582215E13BC00A6EAB2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D581215E13BC00A6EAB2 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +38,22 @@
 		D007D555215DFCCE00A6EAB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D007D557215DFCCE00A6EAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D007D558215DFCCE00A6EAB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D007D560215E061300A6EAB2 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		D007D561215E064300A6EAB2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		D007D562215E065100A6EAB2 /* Flutter.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Flutter.xcconfig; sourceTree = "<group>"; };
+		D007D567215E0C9400A6EAB2 /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
+		D007D569215E0C9400A6EAB2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D007D56A215E0C9400A6EAB2 /* vm_snapshot_data */ = {isa = PBXFileReference; lastKnownFileType = file; path = vm_snapshot_data; sourceTree = "<group>"; };
+		D007D56B215E0C9400A6EAB2 /* isolate_snapshot_data */ = {isa = PBXFileReference; lastKnownFileType = file; path = isolate_snapshot_data; sourceTree = "<group>"; };
+		D007D56C215E0C9400A6EAB2 /* AssetManifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssetManifest.json; sourceTree = "<group>"; };
+		D007D56D215E0C9400A6EAB2 /* kernel_blob.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = kernel_blob.bin; sourceTree = "<group>"; };
+		D007D56E215E0C9400A6EAB2 /* FontManifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FontManifest.json; sourceTree = "<group>"; };
+		D007D56F215E0C9400A6EAB2 /* platform_strong.dill */ = {isa = PBXFileReference; lastKnownFileType = file; path = platform_strong.dill; sourceTree = "<group>"; };
+		D007D571215E0C9400A6EAB2 /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
+		D007D573215E0C9400A6EAB2 /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flutter.framework; sourceTree = "<group>"; };
+		D007D574215E0C9400A6EAB2 /* Flutter.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; };
+		D007D580215E13BC00A6EAB2 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D007D581215E13BC00A6EAB2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007D575215E0C9500A6EAB2 /* App.framework in Frameworks */,
+				D007D57E215E0C9500A6EAB2 /* Flutter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +72,8 @@
 		D007D53D215DFCCC00A6EAB2 = {
 			isa = PBXGroup;
 			children = (
+				D007D566215E0C9400A6EAB2 /* Flutter */,
+				D007D55F215E047B00A6EAB2 /* Config */,
 				D007D548215DFCCC00A6EAB2 /* iOSBridgeFlutterDemo */,
 				D007D547215DFCCC00A6EAB2 /* Products */,
 			);
@@ -62,6 +94,8 @@
 				D007D54A215DFCCC00A6EAB2 /* AppDelegate.m */,
 				D007D54C215DFCCC00A6EAB2 /* ViewController.h */,
 				D007D54D215DFCCC00A6EAB2 /* ViewController.m */,
+				D007D580215E13BC00A6EAB2 /* SecondViewController.h */,
+				D007D581215E13BC00A6EAB2 /* SecondViewController.m */,
 				D007D54F215DFCCC00A6EAB2 /* Main.storyboard */,
 				D007D552215DFCCE00A6EAB2 /* Assets.xcassets */,
 				D007D554215DFCCE00A6EAB2 /* LaunchScreen.storyboard */,
@@ -69,6 +103,58 @@
 				D007D558215DFCCE00A6EAB2 /* main.m */,
 			);
 			path = iOSBridgeFlutterDemo;
+			sourceTree = "<group>";
+		};
+		D007D55F215E047B00A6EAB2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D007D562215E065100A6EAB2 /* Flutter.xcconfig */,
+				D007D560215E061300A6EAB2 /* Debug.xcconfig */,
+				D007D561215E064300A6EAB2 /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D007D566215E0C9400A6EAB2 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				D007D567215E0C9400A6EAB2 /* App.framework */,
+				D007D568215E0C9400A6EAB2 /* flutter_assets */,
+				D007D572215E0C9400A6EAB2 /* engine */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		D007D568215E0C9400A6EAB2 /* flutter_assets */ = {
+			isa = PBXGroup;
+			children = (
+				D007D569215E0C9400A6EAB2 /* LICENSE */,
+				D007D56A215E0C9400A6EAB2 /* vm_snapshot_data */,
+				D007D56B215E0C9400A6EAB2 /* isolate_snapshot_data */,
+				D007D56C215E0C9400A6EAB2 /* AssetManifest.json */,
+				D007D56D215E0C9400A6EAB2 /* kernel_blob.bin */,
+				D007D56E215E0C9400A6EAB2 /* FontManifest.json */,
+				D007D56F215E0C9400A6EAB2 /* platform_strong.dill */,
+				D007D570215E0C9400A6EAB2 /* fonts */,
+			);
+			path = flutter_assets;
+			sourceTree = "<group>";
+		};
+		D007D570215E0C9400A6EAB2 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D007D571215E0C9400A6EAB2 /* MaterialIcons-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		D007D572215E0C9400A6EAB2 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				D007D573215E0C9400A6EAB2 /* Flutter.framework */,
+				D007D574215E0C9400A6EAB2 /* Flutter.podspec */,
+			);
+			path = engine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +167,7 @@
 				D007D542215DFCCC00A6EAB2 /* Sources */,
 				D007D543215DFCCC00A6EAB2 /* Frameworks */,
 				D007D544215DFCCC00A6EAB2 /* Resources */,
+				D007D563215E0AB600A6EAB2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -128,19 +215,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007D579215E0C9500A6EAB2 /* AssetManifest.json in Resources */,
+				D007D577215E0C9500A6EAB2 /* vm_snapshot_data in Resources */,
 				D007D556215DFCCE00A6EAB2 /* LaunchScreen.storyboard in Resources */,
+				D007D578215E0C9500A6EAB2 /* isolate_snapshot_data in Resources */,
+				D007D57C215E0C9500A6EAB2 /* platform_strong.dill in Resources */,
 				D007D553215DFCCE00A6EAB2 /* Assets.xcassets in Resources */,
+				D007D57B215E0C9500A6EAB2 /* FontManifest.json in Resources */,
+				D007D57D215E0C9500A6EAB2 /* MaterialIcons-Regular.ttf in Resources */,
+				D007D57A215E0C9500A6EAB2 /* kernel_blob.bin in Resources */,
+				D007D57F215E0C9500A6EAB2 /* Flutter.podspec in Resources */,
+				D007D576215E0C9500A6EAB2 /* LICENSE in Resources */,
 				D007D551215DFCCC00A6EAB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D007D563215E0AB600A6EAB2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D007D542215DFCCC00A6EAB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007D582215E13BC00A6EAB2 /* SecondViewController.m in Sources */,
 				D007D54E215DFCCC00A6EAB2 /* ViewController.m in Sources */,
 				D007D559215DFCCE00A6EAB2 /* main.m in Sources */,
 				D007D54B215DFCCC00A6EAB2 /* AppDelegate.m in Sources */,
@@ -171,6 +288,7 @@
 /* Begin XCBuildConfiguration section */
 		D007D55A215DFCCE00A6EAB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D007D560215E061300A6EAB2 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -220,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -230,6 +348,7 @@
 		};
 		D007D55B215DFCCE00A6EAB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D007D561215E064300A6EAB2 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -273,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,9 +402,16 @@
 		};
 		D007D55D215DFCCE00A6EAB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D007D560215E061300A6EAB2 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flutter",
+					"$(PROJECT_DIR)/Flutter/engine",
+				);
 				INFOPLIST_FILE = iOSBridgeFlutterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,9 +425,16 @@
 		};
 		D007D55E215DFCCE00A6EAB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D007D561215E064300A6EAB2 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flutter",
+					"$(PROJECT_DIR)/Flutter/engine",
+				);
 				INFOPLIST_FILE = iOSBridgeFlutterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
