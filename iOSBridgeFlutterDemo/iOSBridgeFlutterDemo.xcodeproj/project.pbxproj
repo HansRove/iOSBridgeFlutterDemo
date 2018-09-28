@@ -21,6 +21,7 @@
 		D007D590215E164E00A6EAB2 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D573215E0C9400A6EAB2 /* Flutter.framework */; };
 		D007D591215E164E00A6EAB2 /* Flutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D007D573215E0C9400A6EAB2 /* Flutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D007D594215E17DB00A6EAB2 /* flutter_assets in Resources */ = {isa = PBXBuildFile; fileRef = D007D593215E17DB00A6EAB2 /* flutter_assets */; };
+		D007D597215E2C5A00A6EAB2 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D596215E2C5A00A6EAB2 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,8 @@
 		D007D586215E14E800A6EAB2 /* HRTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRTabBarController.h; sourceTree = "<group>"; };
 		D007D587215E14E800A6EAB2 /* HRTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRTabBarController.m; sourceTree = "<group>"; };
 		D007D593215E17DB00A6EAB2 /* flutter_assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flutter_assets; sourceTree = "<group>"; };
+		D007D595215E2C5A00A6EAB2 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		D007D596215E2C5A00A6EAB2 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				D007D54D215DFCCC00A6EAB2 /* ViewController.m */,
 				D007D580215E13BC00A6EAB2 /* SecondViewController.h */,
 				D007D581215E13BC00A6EAB2 /* SecondViewController.m */,
+				D007D595215E2C5A00A6EAB2 /* ThirdViewController.h */,
+				D007D596215E2C5A00A6EAB2 /* ThirdViewController.m */,
 				D007D586215E14E800A6EAB2 /* HRTabBarController.h */,
 				D007D587215E14E800A6EAB2 /* HRTabBarController.m */,
 				D007D54F215DFCCC00A6EAB2 /* Main.storyboard */,
@@ -238,6 +243,7 @@
 			files = (
 				D007D582215E13BC00A6EAB2 /* SecondViewController.m in Sources */,
 				D007D54E215DFCCC00A6EAB2 /* ViewController.m in Sources */,
+				D007D597215E2C5A00A6EAB2 /* ThirdViewController.m in Sources */,
 				D007D559215DFCCE00A6EAB2 /* main.m in Sources */,
 				D007D588215E14E800A6EAB2 /* HRTabBarController.m in Sources */,
 				D007D54B215DFCCC00A6EAB2 /* AppDelegate.m in Sources */,
