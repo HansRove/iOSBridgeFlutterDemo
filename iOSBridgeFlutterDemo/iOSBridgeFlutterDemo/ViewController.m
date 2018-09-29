@@ -40,6 +40,7 @@
 
     - (void)pushFlutterViewController_MethodChannel {
         FlutterViewController* flutterViewController = [[FlutterViewController alloc] initWithProject:nil nibName:nil bundle:nil];
+        flutterViewController.hidesBottomBarWhenPushed = YES;
         flutterViewController.navigationItem.title = @"MethodChannel Demo";
             __weak __typeof(self) weakSelf = self;
         
@@ -51,7 +52,7 @@
             [messageChannel setMethodCallHandler:^(FlutterMethodCall * _Nonnull call, FlutterResult  _Nonnull result) {
                 // call.method 获取 flutter 给回到的方法名，要匹配到 channelName 对应的多个 发送方法名，一般需要判断区分
                 // call.arguments 获取到 flutter 给到的参数，（比如跳转到另一个页面所需要参数）
-                // result 是给flutter的回调
+                // result 是给flutter的回调 , 只能回调一次
                 NSLog(@"flutter 给到我：\nmethod=%@ \narguments = %@",call.method,call.arguments);
                 
                 if ([call.method isEqualToString:@"toNativeSomething"]) {
@@ -94,7 +95,7 @@
                                            eventSink:(FlutterEventSink)events {
         
         // arguments flutter给native的参数
-        // 回调给flutter
+        // 回调给flutter, 建议使用实例指向，因为该block可以使用多次
         if (events) {
             events(@"我是标题");
         }

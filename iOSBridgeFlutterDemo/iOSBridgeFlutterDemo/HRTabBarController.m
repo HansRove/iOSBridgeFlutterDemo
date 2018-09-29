@@ -23,8 +23,7 @@
     UIViewController *firstVC = [[ViewController alloc] init];
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
     firstNav.title = @"第一tab";
-    firstVC.hidesBottomBarWhenPushed = YES;
-     [self addChildViewController:firstNav];
+    [self addChildViewController:firstNav];
     
     
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:[SecondViewController new]];

@@ -36,12 +36,16 @@ class _MyHomePageState extends State<MyHomePage> {
   // 注册一个通知
   static const EventChannel eventChannel = const EventChannel('com.pages.your/native_post');
 
+  // 注册一个通知
+  static const EventChannel eventChannel1 = const EventChannel('com.second.your/native_post');
+
   @override
   void initState() {
     super.initState();
 
     // 监听事件，同时发送参数12345
     eventChannel.receiveBroadcastStream(12345).listen(_onEvent,onError: _onError);
+    eventChannel1.receiveBroadcastStream(88888).listen(_onChangeCountEvent,onError: _onError);
   }
 
   String naviTitle = '你好，大佬' ;
@@ -51,6 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
       naviTitle =  event.toString();
     });
   }
+
+  // 回调事件
+  void _onChangeCountEvent(Object event) {
+    setState(() {
+      _counter =  int.parse(event.toString());
+    });
+  }
+
   // 错误返回
   void _onError(Object error) {
 
