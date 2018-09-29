@@ -1,4 +1,4 @@
-### 开篇
+# 开篇
 
 ![图形性能对比.jpg](https://upload-images.jianshu.io/upload_images/1206330-96fc744f106a9b32.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -9,7 +9,7 @@
 混编的前提是你的电脑必须有[flutter环境](https://flutterchina.club/get-started/install/)，不会配的请先谷歌教程配置完后再来查看此混编教程。
 
 
-### 正题
+# 正题
 > 因为本文要讲的是iOS，所以正常情况下的环境是macOS + Xcode + flutter环境（v0.8.2-beta）；再加上flutter 需要的的dart语言编辑器 Android Studio 、IntelliJ IDEA 或 Visual Studio Code (VS Code) ；因为flutter是多平台，所以也要安装安卓相关的SDK
 > 
 > 本教程是基于flutter环境版本v0.8.2-beta
