@@ -481,7 +481,7 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 
-## 总结
+### 交互总结
 这两种方式都差不多，一个使用的时候使用block，一个使用的时候使用delegate；最终回调给flutter的都是通过block。
 
 `MethodChannel` 使用block，上下文更加明确；同一个`channel name`可以根据flutter给回的`call.method`、`call.arguments`更加灵活的处理回调handle, 回调只能使用一次（意思就是就算你创建一个实例指向block，单block回调只能使用一次，回调之后flutter block那边不再接收）；
