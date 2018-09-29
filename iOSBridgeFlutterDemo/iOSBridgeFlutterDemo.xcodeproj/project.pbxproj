@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EFE5544619845501FD3BE48 /* libPods-iOSBridgeFlutterDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 309491D1B16DFF300043896E /* libPods-iOSBridgeFlutterDemo.a */; };
 		D007D54B215DFCCC00A6EAB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D54A215DFCCC00A6EAB2 /* AppDelegate.m */; };
 		D007D54E215DFCCC00A6EAB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D54D215DFCCC00A6EAB2 /* ViewController.m */; };
 		D007D551215DFCCC00A6EAB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D007D54F215DFCCC00A6EAB2 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		309491D1B16DFF300043896E /* libPods-iOSBridgeFlutterDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSBridgeFlutterDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D007D546215DFCCC00A6EAB2 /* iOSBridgeFlutterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBridgeFlutterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D007D549215DFCCC00A6EAB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D007D54A215DFCCC00A6EAB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,12 +74,28 @@
 			files = (
 				D007D58E215E164E00A6EAB2 /* App.framework in Frameworks */,
 				D007D590215E164E00A6EAB2 /* Flutter.framework in Frameworks */,
+				2EFE5544619845501FD3BE48 /* libPods-iOSBridgeFlutterDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0441C52D6201520C9E26F5F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8DC7C9C1B7E738B227744719 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				309491D1B16DFF300043896E /* libPods-iOSBridgeFlutterDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D007D53D215DFCCC00A6EAB2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +103,8 @@
 				D007D55F215E047B00A6EAB2 /* Config */,
 				D007D548215DFCCC00A6EAB2 /* iOSBridgeFlutterDemo */,
 				D007D547215DFCCC00A6EAB2 /* Products */,
+				0441C52D6201520C9E26F5F1 /* Pods */,
+				8DC7C9C1B7E738B227744719 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,11 +174,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D007D55C215DFCCE00A6EAB2 /* Build configuration list for PBXNativeTarget "iOSBridgeFlutterDemo" */;
 			buildPhases = (
+				655CB374E6E067D78E909E6B /* [CP] Check Pods Manifest.lock */,
 				D007D542215DFCCC00A6EAB2 /* Sources */,
 				D007D543215DFCCC00A6EAB2 /* Frameworks */,
 				D007D544215DFCCC00A6EAB2 /* Resources */,
-				D007D563215E0AB600A6EAB2 /* ShellScript */,
 				D007D592215E164E00A6EAB2 /* Embed Frameworks */,
+				69F62C83048D4770B91B04C0 /* [CP] Embed Pods Frameworks */,
+				39D7D56D40F317CCF3C6D5CD /* [CP] Copy Pods Resources */,
+				D007D599215F03D300A6EAB2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -217,7 +240,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D007D563215E0AB600A6EAB2 /* ShellScript */ = {
+		39D7D56D40F317CCF3C6D5CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSBridgeFlutterDemo/Pods-iOSBridgeFlutterDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		655CB374E6E067D78E909E6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSBridgeFlutterDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69F62C83048D4770B91B04C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSBridgeFlutterDemo/Pods-iOSBridgeFlutterDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D007D599215F03D300A6EAB2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
