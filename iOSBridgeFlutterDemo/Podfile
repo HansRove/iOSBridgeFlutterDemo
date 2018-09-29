@@ -9,5 +9,6 @@ target 'iOSBridgeFlutterDemo' do
 
 pod 'AFNetworking’
 pod 'SDWebImage'
+pod 'YYModel'
 
 end

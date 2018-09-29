@@ -181,7 +181,7 @@
 				D007D592215E164E00A6EAB2 /* Embed Frameworks */,
 				69F62C83048D4770B91B04C0 /* [CP] Embed Pods Frameworks */,
 				39D7D56D40F317CCF3C6D5CD /* [CP] Copy Pods Resources */,
-				D007D599215F03D300A6EAB2 /* ShellScript */,
+				D007D59A215F087800A6EAB2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -288,9 +288,9 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSBridgeFlutterDemo/Pods-iOSBridgeFlutterDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D007D599215F03D300A6EAB2 /* ShellScript */ = {
+		D007D59A215F087800A6EAB2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
