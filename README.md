@@ -10,31 +10,31 @@
 
 
 # 正题
-> 因为本文要讲的是iOS，所以正常情况下的环境是macOS + Xcode + flutter环境（v0.8.2-beta）；再加上flutter 需要的的dart语言编辑器 Android Studio 、IntelliJ IDEA 或 Visual Studio Code (VS Code) ；因为flutter是多平台，所以也要安装安卓相关的SDK
+> 因为本文要讲的是iOS，所以正常情况下的环境是macOS + Xcode + flutter环境（v0.8.2-beta）；再加上flutter 需要的的dart语言编辑器 Android Studio 、IntelliJ IDEA 或 Visual Studio Code (VS Code) ；因为flutter是多平台，所以也要安装安卓相关的SDK。
 > 
 > 本教程是基于flutter环境版本v0.8.2-beta
 
-环境配好后，命令行输入：`flutter doctor -v` , 确保`Flutter` 、 `Android toolchain` 、`iOS toolchain` 、 `Connected devices` (连接中的设备，这个列表是你open 你Xcode虚拟机、或者安卓虚拟机的时候才会有) 都不是[✗]这个符号，则说明你的环境OK了 【PS: 记得也要注意dart语言编辑器的flutter环境】
+环境配好后，命令行输入：`flutter doctor -v` , 确保`Flutter` 、 `Android toolchain` 、`iOS toolchain` 、 `Connected devices` (连接中的设备，这个列表是你打开你Xcode虚拟机或者安卓虚拟机的时候才会有) 都不是[✗]这个符号，则说明你的环境OK了 【也要注意编辑器的flutter环境】
 
 ![flutter doctor.png](https://upload-images.jianshu.io/upload_images/1206330-48eaf22db500da37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-# Xcode混编Flutter项目配置
+# Xcode工程项目配置
 
 ### Xcode项目的开始
-最权威的教程当然是[flutter自家的混编wiki](https://github.com/flutter/flutter/wiki/Add-Flutter-to-existing-apps), iOS部分我英文理解能力不是很好，实际操作的时候也按照教程操作了一遍，再和网上教程总结了一遍，一路踏坑而出。
+最权威的教程当然是[flutter自家的混编wiki](https://github.com/flutter/flutter/wiki/Add-Flutter-to-existing-apps)，iOS部分我英文理解能力不是很好，实际操作的时候也按照教程操作了一遍，再和网上教程总结了一遍，一路踏坑而出。
 
 * Flutter混合开发还不支持bit code，所以在iOS工程检查项目并关闭bit code
 
 ![关闭项目bitcode.png](https://upload-images.jianshu.io/upload_images/1206330-018122449b45fc0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-* flutter modulec创建 （不要耦合近Xcode项目中，最好放到与项目目录同级）
+* flutter module创建 （不要耦合近Xcode项目中，最好放到与项目目录同级）
 > 这里因为使用的是flutter环境（v0.8.2-beta），应该也是很新的分支。看网上说明flutter的master才是最新的分支。先用beta创建module，如果创建不成功再切换master分支进行创建
 
 ![create flutter module.png](https://upload-images.jianshu.io/upload_images/1206330-ee48af64b7175a20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![目录结构.png](https://upload-images.jianshu.io/upload_images/1206330-6ebf75e8f86ecc7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-ps: 如果创建不成功，请切换master分支试一下；执行`flutter channel master`
+>如果创建不成功，请切换master分支试一下；执行`flutter channel master`
 
 
 * flutter module 重要文件分析 （部分是隐藏文件，记得查看全部）
@@ -51,7 +51,7 @@ ps: 如果创建不成功，请切换master分支试一下；执行`flutter chan
 ![新建胶水配置文件.png](https://upload-images.jianshu.io/upload_images/1206330-fd8d8cf232789d32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-* 三个文件的引入内容 （所引用的都是绝对路径，最终都是指引到`Generated.xcconfig`）
+* 三个文件的引入内容 （所引用的都是**绝对路径**，最终都是指引到`Generated.xcconfig`）
 
 In `Flutter.xcconfig`:
 
@@ -85,19 +85,19 @@ FLUTTER_BUILD_MODE=release
 
 * 最重要： 引入`xcode-backend.sh` 
 
-在iOS工程里添加运行脚本 `"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh" build`，并且确保`Run Script`这一行在` "Target dependencies"` 或者 `"Check Pods Manifest.lock"`后面。
+在iOS工程里添加运行脚本（创建Run Scrip） `"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh" build`，并且确保`Run Script`这一行在` "Target dependencies"` 或者 `"Check Pods Manifest.lock"`后面。
 
 ![引入xcode-backend.png](https://upload-images.jianshu.io/upload_images/1206330-babbe3851639575f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-此时点击Xcode的运行，会执行到`xcode-backend.sh`脚本; 此时在iOS工程目录，也会生成一个Flutter文件夹，里面是Flutter工程的产物（这个就是flutter最终与Native交互的产物）
+此时点击Xcode的运行，会执行到`xcode-backend.sh`脚本；此时在iOS工程目录，也会生成一个Flutter文件夹，里面是Flutter工程的产物（这个就是flutter最终与Native交互的产物）
 
 * 添加flutter编译产物
 
-右键项目-`Add Files to 'xxx'` 【Options先选`Create groups`】，选择`Flutter`目录
+右键项目 - `Add Files to 'xxx'` 【Options先选`Create groups`】，选择`Flutter`目录
 
 ![添加flutter编译产物.png](https://upload-images.jianshu.io/upload_images/1206330-f1be88c911720554.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-但是`flutter_assets` 并不能使用`Create groups` 的方式添加，只能使用`Creat folder references` 的方式添加进Xcode项目内，否则跳转flutter会页面渲染失败。 
+但是`flutter_assets` 并不能使用`Create groups` 的方式添加，只能使用`Creat folder references` 的方式添加进Xcode项目内，否则跳转flutter会页面渲染失败（页面空白）。 
 
 ![flutter_assets特殊处理1.png](https://upload-images.jianshu.io/upload_images/1206330-a3edd882c4e4a204.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 应该删除`flutter_assets`，文件夹再`Add Files to 'xxx'`，选择`Creat folder references` ；最终如下图
@@ -108,7 +108,7 @@ FLUTTER_BUILD_MODE=release
 
 ![flutter framework引入.png](https://upload-images.jianshu.io/upload_images/1206330-d068af8ebca4f29a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-至此，Xcode与Flutter之间混编配置完成，两个项目文件已经关联上了。 这时候你就可以修改`main.dart` 文件内容，重新编译运行Xcode 则`APP.framework`自动会被编译成最新的flutter代码。 
+至此，Xcode与Flutter之间混编配置完成，两个项目文件已经关联上了。这时候你就可以修改`main.dart` 文件内容，重新编译运行Xcode 则`APP.framework`自动会被编译成最新的flutter代码。 
 
 ### 项目中使用pod管理情况
 
@@ -123,6 +123,8 @@ FLUTTER_BUILD_MODE=release
 都需要**增加**一行pod config文件引用：（自己查看自己的Pods目录文件路径, release就使用.release.xcconfig）
 
 ```objective-c
+#include "Flutter.xcconfig"
+// 下面为pod引入需要增加的一行
 #include "Pods/Target Support Files/Pods-iOSBridgeFlutterDemo/Pods-iOSBridgeFlutterDemo.debug.xcconfig"
 ```
 - 7、项目重新编译，Success
@@ -132,7 +134,14 @@ FLUTTER_BUILD_MODE=release
 - 如果项目ignore Pods文件夹， 则走**一方法**中的1、4、5、6、7步骤
 - 如果项目Pods文件夹存在，则走**一方法**中的6、7步骤
 
-> PS: 每次pod update或者pod install都会报错，因为Run Script的原因，所以每次添加或更新pod都得删除Run Script更新pod再添加回Run Script（1、4、6、7步骤）；这些繁琐的操作不知道有没有办法避免，知道的朋友可以回复一下？
+> PS: 每次pod update或者pod install都会报错，因为Run Script的原因，所以每次添加或更新pod都得删除Run Script更新pod再添加回Run Script（1、4、6、7步骤）；这些繁琐的操作不知道有没有办法避免，知道的朋友可以回复一下？不吝赐教，谢谢！
+
+**上面的解决办法是：使用Xcode9.2创建Run Script即可。如果是Xcode 10创建就会出错（原理不详，估计是Xcode bug）**
+
+因为Xcode9.2创建的Run Script没有`inputFileListPaths`和`outputFileListPaths` ，而Xcode10创建会有，所以Xcode10创建的小朋友只需要修改`project.pbxproj`文件（删掉两个字段相关）即可。
+
+![Xcode9.2与Xcode10 Run Script对比.png](https://upload-images.jianshu.io/upload_images/1206330-9d24f1c54cc125d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 # Xcode 与 Flutter 交互
 ### AppDelegate 改造
@@ -488,20 +497,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
  `EventChannel` 使用delegate，代码层次更鲜明；同一个`channel name`只能通过判断`arguments`参数处理回调handle, 回调可以使用多次（创建一个实例指向block，该block可以向flutter发送多次）；
 
+`BasicMessageChannel` 请自行学习。
+
 ## 疑问
 
-创建使用`FlutterViewController` Xcode的Memory一直在增加到一个水平，分类重写`- (void)dealloc` 也没有进来，估计是内存泄漏了  于是去查了官方的Issues , 确实有几个关联：
+创建使用`FlutterViewController` Xcode的Memory一直在增加到一个水平，分类重写`- (void)dealloc` 也没有进来，估计是内存泄漏了。于是去查了官方的Issues ，确实有几个关联：
 
-https://github.com/flutter/flutter/issues/20409
-https://github.com/flutter/flutter/issues/21347
+- [Flutter SSL Memory Leaks #20409](https://github.com/flutter/flutter/issues/20409)
+- [Unable to release FlutterViewController even when there is nothing referencing it. #21347](https://github.com/flutter/flutter/issues/21347)
 
-不知道这谁知道有没有解决方案？Native 简单push FlutterViewController， pop回，内存到达一个阶段后不降，FlutterViewController 不会执行dealloc方法。
+Native 简单`push FlutterViewController`， `pop`回，内存到达一个阶段后不降，`FlutterViewController `不会执行`dealloc`方法。不知道这谁知道有没有解决方案？不吝赐教，谢谢！
 
 ## 学习
-[Flutter与已有iOS工程混合开发与脚本配置](https://juejin.im/post/5b7a1bfbe51d4538a93d2339)
+- [Flutter与已有iOS工程混合开发与脚本配置](https://juejin.im/post/5b7a1bfbe51d4538a93d2339)
 
-[Flutter中文网](https://flutterchina.club/using-ide/)
+- [深入理解Flutter Platform Channel](https://www.jianshu.com/p/39575a90e820)
 
-[Flutter从环境搭建到进阶系列教程](http://flutter-dev.cn/topic/12/flutter%E4%BB%8E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%88%B0%E8%BF%9B%E9%98%B6%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
+- [Flutter中文网](https://flutterchina.club/using-ide/)
 
-[本文Demo](https://github.com/HansRove/iOSBridgeFlutterDemo)
+- [Flutter从环境搭建到进阶系列教程](http://flutter-dev.cn/topic/12/flutter%E4%BB%8E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%88%B0%E8%BF%9B%E9%98%B6%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B)
+
+- [本文Demo](https://github.com/HansRove/iOSBridgeFlutterDemo)
