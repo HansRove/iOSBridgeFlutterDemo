@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+# 下面是复制官方demo的podfile内容修改：
+# 这里写你的flutter module相对路径
+flutter_application_path = '../flutter_module/'
+
+
+target 'NewHybridDemo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for NewHybridDemo
+
+eval(File.read(File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')),binding)
+
+end

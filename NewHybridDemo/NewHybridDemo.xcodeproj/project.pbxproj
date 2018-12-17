@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		610A6DFEE00FE79C090E280F /* libPods-NewHybridDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD2558349E7F59974B2FAF9 /* libPods-NewHybridDemo.a */; };
 		D03D736A21C730100000C3B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D736921C730100000C3B5 /* AppDelegate.m */; };
 		D03D736D21C730100000C3B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D736C21C730100000C3B5 /* ViewController.m */; };
 		D03D737021C730100000C3B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03D736E21C730100000C3B5 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5715B0D775B4143A3E209378 /* Pods-NewHybridDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHybridDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewHybridDemo/Pods-NewHybridDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B680BF6BFF9F9B462AB25769 /* Pods-NewHybridDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHybridDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewHybridDemo/Pods-NewHybridDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CCD2558349E7F59974B2FAF9 /* libPods-NewHybridDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewHybridDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03D736521C730100000C3B5 /* NewHybridDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewHybridDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03D736821C730100000C3B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D03D736921C730100000C3B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				610A6DFEE00FE79C090E280F /* libPods-NewHybridDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				D03D736721C730100000C3B5 /* NewHybridDemo */,
 				D03D736621C730100000C3B5 /* Products */,
+				DC4006558AFA29EF72E84717 /* Pods */,
+				F05DE3744B953FAC898DE37B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = NewHybridDemo;
 			sourceTree = "<group>";
 		};
+		DC4006558AFA29EF72E84717 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5715B0D775B4143A3E209378 /* Pods-NewHybridDemo.debug.xcconfig */,
+				B680BF6BFF9F9B462AB25769 /* Pods-NewHybridDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F05DE3744B953FAC898DE37B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2558349E7F59974B2FAF9 /* libPods-NewHybridDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D03D737B21C730120000C3B5 /* Build configuration list for PBXNativeTarget "NewHybridDemo" */;
 			buildPhases = (
+				792C501E5559DEB4DEA7D14C /* [CP] Check Pods Manifest.lock */,
 				D03D736121C730100000C3B5 /* Sources */,
 				D03D736221C730100000C3B5 /* Frameworks */,
 				D03D736321C730100000C3B5 /* Resources */,
+				E99924BF4565E7866B4A6D6C /* [CP] Embed Pods Frameworks */,
+				F9A1D4F46B069F5BCFB2A859 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		792C501E5559DEB4DEA7D14C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewHybridDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E99924BF4565E7866B4A6D6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NewHybridDemo/Pods-NewHybridDemo-frameworks.sh",
+				"${PODS_ROOT}/../../flutter_module/.ios/Flutter/engine/Flutter.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHybridDemo/Pods-NewHybridDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9A1D4F46B069F5BCFB2A859 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewHybridDemo/Pods-NewHybridDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D03D736121C730100000C3B5 /* Sources */ = {
@@ -283,14 +364,12 @@
 		};
 		D03D737C21C730120000C3B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5715B0D775B4143A3E209378 /* Pods-NewHybridDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewHybridDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zero.NewHybridDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,14 +378,12 @@
 		};
 		D03D737D21C730120000C3B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B680BF6BFF9F9B462AB25769 /* Pods-NewHybridDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NewHybridDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zero.NewHybridDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
