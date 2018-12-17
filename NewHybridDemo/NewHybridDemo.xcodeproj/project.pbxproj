@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,28 @@
 		D03D737221C730120000C3B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03D737121C730120000C3B5 /* Assets.xcassets */; };
 		D03D737521C730120000C3B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03D737321C730120000C3B5 /* LaunchScreen.storyboard */; };
 		D03D737821C730120000C3B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D737721C730120000C3B5 /* main.m */; };
+		D03D73BF21C7AC9C0000C3B5 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73BE21C7AC9C0000C3B5 /* App.framework */; };
+		D03D73C121C7ACA40000C3B5 /* flutter_assets in Resources */ = {isa = PBXBuildFile; fileRef = D03D73C021C7ACA40000C3B5 /* flutter_assets */; };
+		D03D73C221C7ACC10000C3B5 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73BE21C7AC9C0000C3B5 /* App.framework */; };
+		D03D73C321C7ACC10000C3B5 /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73BE21C7AC9C0000C3B5 /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D03D73CA21C7AD900000C3B5 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D73C521C7AD8F0000C3B5 /* ThirdViewController.m */; };
+		D03D73CB21C7AD900000C3B5 /* HRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D73C721C7AD8F0000C3B5 /* HRTabBarController.m */; };
+		D03D73CC21C7AD900000C3B5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D73C921C7AD900000C3B5 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D03D739421C777360000C3B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D03D73C321C7ACC10000C3B5 /* App.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5715B0D775B4143A3E209378 /* Pods-NewHybridDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewHybridDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewHybridDemo/Pods-NewHybridDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -30,6 +51,14 @@
 		D03D737421C730120000C3B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D03D737621C730120000C3B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D03D737721C730120000C3B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D03D73BE21C7AC9C0000C3B5 /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
+		D03D73C021C7ACA40000C3B5 /* flutter_assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flutter_assets; sourceTree = "<group>"; };
+		D03D73C421C7AD8F0000C3B5 /* HRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTabBarController.h; sourceTree = "<group>"; };
+		D03D73C521C7AD8F0000C3B5 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		D03D73C621C7AD8F0000C3B5 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		D03D73C721C7AD8F0000C3B5 /* HRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTabBarController.m; sourceTree = "<group>"; };
+		D03D73C821C7AD8F0000C3B5 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D03D73C921C7AD900000C3B5 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03D73BF21C7AC9C0000C3B5 /* App.framework in Frameworks */,
+				D03D73C221C7ACC10000C3B5 /* App.framework in Frameworks */,
 				610A6DFEE00FE79C090E280F /* libPods-NewHybridDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +78,7 @@
 		D03D735C21C730100000C3B5 = {
 			isa = PBXGroup;
 			children = (
+				D03D73BD21C7AC870000C3B5 /* Flutter */,
 				D03D736721C730100000C3B5 /* NewHybridDemo */,
 				D03D736621C730100000C3B5 /* Products */,
 				DC4006558AFA29EF72E84717 /* Pods */,
@@ -69,6 +101,12 @@
 				D03D736921C730100000C3B5 /* AppDelegate.m */,
 				D03D736B21C730100000C3B5 /* ViewController.h */,
 				D03D736C21C730100000C3B5 /* ViewController.m */,
+				D03D73C421C7AD8F0000C3B5 /* HRTabBarController.h */,
+				D03D73C721C7AD8F0000C3B5 /* HRTabBarController.m */,
+				D03D73C821C7AD8F0000C3B5 /* SecondViewController.h */,
+				D03D73C921C7AD900000C3B5 /* SecondViewController.m */,
+				D03D73C621C7AD8F0000C3B5 /* ThirdViewController.h */,
+				D03D73C521C7AD8F0000C3B5 /* ThirdViewController.m */,
 				D03D736E21C730100000C3B5 /* Main.storyboard */,
 				D03D737121C730120000C3B5 /* Assets.xcassets */,
 				D03D737321C730120000C3B5 /* LaunchScreen.storyboard */,
@@ -76,6 +114,15 @@
 				D03D737721C730120000C3B5 /* main.m */,
 			);
 			path = NewHybridDemo;
+			sourceTree = "<group>";
+		};
+		D03D73BD21C7AC870000C3B5 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				D03D73C021C7ACA40000C3B5 /* flutter_assets */,
+				D03D73BE21C7AC9C0000C3B5 /* App.framework */,
+			);
+			path = Flutter;
 			sourceTree = "<group>";
 		};
 		DC4006558AFA29EF72E84717 /* Pods */ = {
@@ -103,11 +150,13 @@
 			buildConfigurationList = D03D737B21C730120000C3B5 /* Build configuration list for PBXNativeTarget "NewHybridDemo" */;
 			buildPhases = (
 				792C501E5559DEB4DEA7D14C /* [CP] Check Pods Manifest.lock */,
+				D03D738121C749890000C3B5 /* ShellScript */,
 				D03D736121C730100000C3B5 /* Sources */,
 				D03D736221C730100000C3B5 /* Frameworks */,
 				D03D736321C730100000C3B5 /* Resources */,
 				E99924BF4565E7866B4A6D6C /* [CP] Embed Pods Frameworks */,
 				F9A1D4F46B069F5BCFB2A859 /* [CP] Copy Pods Resources */,
+				D03D739421C777360000C3B5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,11 +178,12 @@
 				TargetAttributes = {
 					D03D736421C730100000C3B5 = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = D03D736021C730100000C3B5 /* Build configuration list for PBXProject "NewHybridDemo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -157,6 +207,7 @@
 			files = (
 				D03D737521C730120000C3B5 /* LaunchScreen.storyboard in Resources */,
 				D03D737221C730120000C3B5 /* Assets.xcassets in Resources */,
+				D03D73C121C7ACA40000C3B5 /* flutter_assets in Resources */,
 				D03D737021C730100000C3B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +232,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D03D738121C749890000C3B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nenv\n\n# 删除本地Flutter文件夹\nrm -rf -- \"$SOURCE_ROOT/Flutter\"\n# 将胶水文件copy到本地文件夹\nmkdir -p \"$SOURCE_ROOT/Flutter\"\n\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\n\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/flutter_assets\" \"$SOURCE_ROOT/Flutter\"\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/App.framework\" \"$SOURCE_ROOT/Flutter\"\n\n#cp -r -- \"${flutter_framework}\" \"$FLUTTER_FRAMEWOTK_PATH\"\n\n#framework重签名，暂时用不到。这行命令会把framework移动到app中（原本生成位置移除）\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
 		};
 		E99924BF4565E7866B4A6D6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -222,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03D73CC21C7AD900000C3B5 /* SecondViewController.m in Sources */,
 				D03D736D21C730100000C3B5 /* ViewController.m in Sources */,
 				D03D737821C730120000C3B5 /* main.m in Sources */,
+				D03D73CA21C7AD900000C3B5 /* ThirdViewController.m in Sources */,
+				D03D73CB21C7AD900000C3B5 /* HRTabBarController.m in Sources */,
 				D03D736A21C730100000C3B5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,8 +439,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NewHybridDemo/Flutter",
+					"$(PROJECT_DIR)/Flutter",
+				);
 				INFOPLIST_FILE = NewHybridDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"FlutterPluginRegistrant\"",
+					"-framework",
+					"\"Flutter\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = zero.NewHybridDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -382,8 +467,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NewHybridDemo/Flutter",
+					"$(PROJECT_DIR)/Flutter",
+				);
 				INFOPLIST_FILE = NewHybridDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"FlutterPluginRegistrant\"",
+					"-framework",
+					"\"Flutter\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = zero.NewHybridDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
