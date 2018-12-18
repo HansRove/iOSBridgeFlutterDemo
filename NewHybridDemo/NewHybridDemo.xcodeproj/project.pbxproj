@@ -14,13 +14,13 @@
 		D03D737221C730120000C3B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03D737121C730120000C3B5 /* Assets.xcassets */; };
 		D03D737521C730120000C3B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03D737321C730120000C3B5 /* LaunchScreen.storyboard */; };
 		D03D737821C730120000C3B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D737721C730120000C3B5 /* main.m */; };
-		D03D73BF21C7AC9C0000C3B5 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73BE21C7AC9C0000C3B5 /* App.framework */; };
 		D03D73C121C7ACA40000C3B5 /* flutter_assets in Resources */ = {isa = PBXBuildFile; fileRef = D03D73C021C7ACA40000C3B5 /* flutter_assets */; };
-		D03D73C221C7ACC10000C3B5 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73BE21C7AC9C0000C3B5 /* App.framework */; };
-		D03D73C321C7ACC10000C3B5 /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73BE21C7AC9C0000C3B5 /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D03D73CA21C7AD900000C3B5 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D73C521C7AD8F0000C3B5 /* ThirdViewController.m */; };
 		D03D73CB21C7AD900000C3B5 /* HRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D73C721C7AD8F0000C3B5 /* HRTabBarController.m */; };
 		D03D73CC21C7AD900000C3B5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D73C921C7AD900000C3B5 /* SecondViewController.m */; };
+		D03D73CE21C883A70000C3B5 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73CD21C883A70000C3B5 /* App.framework */; };
+		D03D73CF21C884220000C3B5 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73CD21C883A70000C3B5 /* App.framework */; };
+		D03D73D021C884220000C3B5 /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D03D73CD21C883A70000C3B5 /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D03D73C321C7ACC10000C3B5 /* App.framework in Embed Frameworks */,
+				D03D73D021C884220000C3B5 /* App.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +51,6 @@
 		D03D737421C730120000C3B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D03D737621C730120000C3B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D03D737721C730120000C3B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D03D73BE21C7AC9C0000C3B5 /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
 		D03D73C021C7ACA40000C3B5 /* flutter_assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = flutter_assets; sourceTree = "<group>"; };
 		D03D73C421C7AD8F0000C3B5 /* HRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTabBarController.h; sourceTree = "<group>"; };
 		D03D73C521C7AD8F0000C3B5 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		D03D73C721C7AD8F0000C3B5 /* HRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTabBarController.m; sourceTree = "<group>"; };
 		D03D73C821C7AD8F0000C3B5 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		D03D73C921C7AD900000C3B5 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D03D73CD21C883A70000C3B5 /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D03D73BF21C7AC9C0000C3B5 /* App.framework in Frameworks */,
-				D03D73C221C7ACC10000C3B5 /* App.framework in Frameworks */,
+				D03D73CE21C883A70000C3B5 /* App.framework in Frameworks */,
+				D03D73CF21C884220000C3B5 /* App.framework in Frameworks */,
 				610A6DFEE00FE79C090E280F /* libPods-NewHybridDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,8 +119,8 @@
 		D03D73BD21C7AC870000C3B5 /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
+				D03D73CD21C883A70000C3B5 /* App.framework */,
 				D03D73C021C7ACA40000C3B5 /* flutter_assets */,
-				D03D73BE21C7AC9C0000C3B5 /* App.framework */,
 			);
 			path = Flutter;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nenv\n\n# 删除本地Flutter文件夹\nrm -rf -- \"$SOURCE_ROOT/Flutter\"\n# 将胶水文件copy到本地文件夹\nmkdir -p \"$SOURCE_ROOT/Flutter\"\n\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\n\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/flutter_assets\" \"$SOURCE_ROOT/Flutter\"\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/App.framework\" \"$SOURCE_ROOT/Flutter\"\n\n#cp -r -- \"${flutter_framework}\" \"$FLUTTER_FRAMEWOTK_PATH\"\n\n#framework重签名，暂时用不到。这行命令会把framework移动到app中（原本生成位置移除）\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
+			shellScript = "\nenv\n\n# 删除本地Flutter文件夹\nrm -rf -- \"$SOURCE_ROOT/Flutter\"\n# 再生成Flutter文件夹\nmkdir -p \"$SOURCE_ROOT/Flutter\"\n\n# 编译生成\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\n# 瘦身\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" thin\n\n# 将胶水文件copy到本地文件夹\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/flutter_assets\" \"$SOURCE_ROOT/Flutter\"\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/App.framework\" \"$SOURCE_ROOT/Flutter\"\n\n\n#framework重签名，暂时用不到。这行命令会把framework移动到app中（原本生成位置移除）\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
 		};
 		E99924BF4565E7866B4A6D6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
