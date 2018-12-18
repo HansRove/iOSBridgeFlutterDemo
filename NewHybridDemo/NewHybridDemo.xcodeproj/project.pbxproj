@@ -248,7 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nenv\n\n# 删除本地Flutter文件夹\nrm -rf -- \"$SOURCE_ROOT/Flutter\"\n# 再生成Flutter文件夹\nmkdir -p \"$SOURCE_ROOT/Flutter\"\n\n# 编译生成\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\n# 瘦身\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" thin\n\n# 将胶水文件copy到本地文件夹\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/flutter_assets\" \"$SOURCE_ROOT/Flutter\"\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/App.framework\" \"$SOURCE_ROOT/Flutter\"\n\n\n#framework重签名，暂时用不到。这行命令会把framework移动到app中（原本生成位置移除）\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
+			shellScript = "\nenv\n\n# 删除本地Flutter文件夹\nrm -rf -- \"$SOURCE_ROOT/Flutter\"\n# 再生成Flutter文件夹\nmkdir -p \"$SOURCE_ROOT/Flutter\"\n\n# 编译生成\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\n# 瘦身\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" thin\n\nif [[ \"$CONFIGURATION\" =~ \"Release\" ]];then\n# Release环境删除Flutter.framework \"x86_64\" 框架\nlipo -remove \"x86_64\" \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/Engine/Flutter.framework/Flutter\" -output \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/Engine/Flutter.framework/Flutter\"\nfi\n\n# 将胶水文件copy到本地文件夹\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/flutter_assets\" \"$SOURCE_ROOT/Flutter\"\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/App.framework\" \"$SOURCE_ROOT/Flutter\"\n\n#framework重签名，暂时用不到。这行命令会把framework移动到app中（原本生成位置移除）\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
 		};
 		E99924BF4565E7866B4A6D6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
