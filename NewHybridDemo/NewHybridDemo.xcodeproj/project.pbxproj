@@ -150,7 +150,7 @@
 			buildConfigurationList = D03D737B21C730120000C3B5 /* Build configuration list for PBXNativeTarget "NewHybridDemo" */;
 			buildPhases = (
 				792C501E5559DEB4DEA7D14C /* [CP] Check Pods Manifest.lock */,
-				D03D738121C749890000C3B5 /* ShellScript */,
+				D0205C7621C8900A00221D84 /* ShellScript */,
 				D03D736121C730100000C3B5 /* Sources */,
 				D03D736221C730100000C3B5 /* Frameworks */,
 				D03D736321C730100000C3B5 /* Resources */,
@@ -233,22 +233,18 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D03D738121C749890000C3B5 /* ShellScript */ = {
+		D0205C7621C8900A00221D84 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nenv\n\n# 删除本地Flutter文件夹\nrm -rf -- \"$SOURCE_ROOT/Flutter\"\n# 再生成Flutter文件夹\nmkdir -p \"$SOURCE_ROOT/Flutter\"\n\n# 编译生成\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\n# 瘦身\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" thin\n\nif [[ \"$CONFIGURATION\" =~ \"Release\" ]];then\n# Release环境删除Flutter.framework \"x86_64\" 框架\nlipo -remove \"x86_64\" \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/Engine/Flutter.framework/Flutter\" -output \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/Engine/Flutter.framework/Flutter\"\nfi\n\n# 将胶水文件copy到本地文件夹\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/flutter_assets\" \"$SOURCE_ROOT/Flutter\"\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/App.framework\" \"$SOURCE_ROOT/Flutter\"\n\n#framework重签名，暂时用不到。这行命令会把framework移动到app中（原本生成位置移除）\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
+			shellScript = "\nenv\n\n# 删除本地Flutter文件夹\nrm -rf -- \"$SOURCE_ROOT/Flutter\"\n# 再生成Flutter文件夹\nmkdir -p \"$SOURCE_ROOT/Flutter\"\n\n# 编译生成\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\n# 瘦身\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" thin\n\nif [[ \"$CONFIGURATION\" =~ \"Release\" ]];then\n# Release环境删除Flutter.framework \"x86_64\" 框架\nlipo -remove \"x86_64\" \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/engine/Flutter.framework/Flutter\" -output \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/engine/Flutter.framework/Flutter\"\nfi\n\n# 将胶水文件copy到本地文件夹\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/flutter_assets\" \"$SOURCE_ROOT/Flutter\"\ncp -r -- \"$FLUTTER_APPLICATION_PATH/.ios/Flutter/App.framework\" \"$SOURCE_ROOT/Flutter\"\n\n#framework重签名，暂时用不到。这行命令会把framework移动到app中（原本生成位置移除）\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed";
 		};
 		E99924BF4565E7866B4A6D6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
